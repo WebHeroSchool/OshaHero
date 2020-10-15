@@ -1,5 +1,5 @@
 .title {font-family: Roboto;}
-body {display: block; margin: 0px;}
+.body {display: block; margin: 0px;}
 .wrapper {
   margin: auto;
   width: 80%;
@@ -7,12 +7,13 @@ body {display: block; margin: 0px;}
 .header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 206px;
 }
 .logo {
   position: relative;
   padding: 40px 0;
   padding-left: 44px;
-  font: bold 24px/31px pt_serif,arial,helvetica,sans-serif;
+  font: bold 24px/31px pt_serif;
   }
 .logo__circle {
   position: absolute;
@@ -39,7 +40,7 @@ body {display: block; margin: 0px;}
 .menu__item {
   position: relative;
   margin-right: 26px;
-  font: 500 18px/21px Roboto,arial,helvetica,sans-serif;
+  font: 500 18px/21px Roboto;
   color: #000;
   text-decoration: none;
 }
@@ -73,3 +74,63 @@ background: #0056EC;
   opacity: 1;
   width: 100%;
 }
+.main {
+  padding-right: 63%;
+  background:no-repeat url(img/main.svg) top right;
+}
+.main__title {
+  margin: 0 0 40px 0;
+  width: 567px;
+  height: 255px;
+  font-style: normal;
+  font: bold 66px/87px pt_serif;
+  /*font-family: PT serif;
+  font-weight: bold;
+  font-size: 66px;
+  line-height: 87px;*/
+  }
+.main-subtitle {
+  margin: 0 0 41px 0;
+  width: 455px;
+  height: 52px;
+  font: normal 22px/26px Roboto;
+}
+.main__title-text_highlight {
+  background: #ECF3FF;
+}
+.main__button {
+  display: inline-block;
+  padding: 18px 21px;
+  /*width: 250px;
+  height: 29px;
+  margin: 0 0 41px 0;*/
+  font: 18px/21px Roboto;
+  background-color: #0056EC;
+  color: #FFF;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: opacity .5s;
+}
+.main__button:hover {
+  opacity: .5;
+}
+.menu__item::after {
+  position: absolute;
+  display: block;
+  content: '';
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #0056EC;
+  opacity: 0;
+  transition: opacity 0.5s, width 0.5s;
+  }
+  .link-hover-solid-main__title::after {
+  position: absolute;
+  display: block;
+  content: '';
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #0056EC;
+  }
