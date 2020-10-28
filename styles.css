@@ -1,5 +1,6 @@
 .title {font-family: Roboto;}
-.body {display: block; margin: 0px;}
+body {display: block; margin: 0;
+}
 .wrapper {
   margin: auto;
   width: 80%;
@@ -9,11 +10,12 @@
   justify-content: space-between;
   margin-bottom: 206px;
 }
+/*-----------логотип-----------------------------*/
 .logo {
   position: relative;
   padding: 40px 0;
   padding-left: 44px;
-  font: bold 24px/31px pt_serif;
+  font: bold 24px/32px PT-serif;
   }
 .logo__circle {
   position: absolute;
@@ -33,6 +35,7 @@
 .logo__circle_color_darck-blue {
   background: #0056EC;
 }
+/*----------------------------навигация----------------*/
 .menu {
   display:flex;
   align-items: center;
@@ -80,11 +83,16 @@ background:no-repeat url(img/main.svg) top right;
 }
 .main__title {
 margin: 0 0 40px 0;
+width: 567px;
+height: 255px;
 font-style: normal;
 font: bold 66px/87px pt_serif;
 }
 .main-subtitle {
 margin: 0 0 41px 0;
+width: 455px;
+height: 52px;
+line-height: 26px;
 font: normal 22px/26px Roboto;
 }
 .main__title-text_highlight {
@@ -116,7 +124,125 @@ background: #ECF3FF;
   transition: opacity 0.5s, width 0.5s;
 }
  /*---------------Кнопка навигации------------*/
-.menu-wrapper {
+
+/* скрываем чекбокс */
+#menu__toggle {
+  opacity: 0;
+}
+/* стилизуем кнопку */
+.menu__btn {
+  display: none;
+  position: fixed;
+  top: 32px;
+  left: 326px;
+  width: 25px;
+  height: 17px;
+  cursor: pointer;
+  z-index: 1;
+}
+@media (max-width: 375px){
+  .menu__btn {
+   display: flex; /* используем flex для центрирования содержимого */
+   align-items: center;  /* центрируем содержимое кнопки */
+  }
+}
+/* добавляем "гамбургер" */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #0056EC;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -4px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 4px;
+}
+/*------------------------ контейнер меню------------------------ */
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  padding: 186px 0;
+  list-style: none;
+  text-align: center;
+  background-color: #fff;
+  margin: 0 0;
+ /* box-shadow: 10px 0px 16px rgba(0, 0, 0, .2);*/
+}
+
+/* элементы меню */
+.menu__item_box {
+  display: block;
+  margin-bottom: 24px ;
+  color: #000000;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  text-decoration: none;
+}
+.menu__item_box:hover {
+  background-color: #FFF;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+
+@media (max-width: 375px) {
+  .menu,.logo__name {
+    display: none;
+  }
+  .header {
+    margin-bottom: 28px;
+  }
+  .main {
+    text-align: center;
+    padding: 74% 0 0;
+    background-size: 74%;
+    background-position: top center;
+  }
+  .main__title {
+    margin-bottom: 44px;
+    font: bold 30px/40px pt_serif;
+  }
+  .main-subtitle {
+    margin-bottom: 25px;
+    font: 500 16px/19px Roboto;
+  }
+  .main__button {
+    font: 500 14px/16px Roboto;
+  }
+/*  .menu__icon__line {
+   width: 35px;
+   height: 3px;
+   left: 326px;
+   background-color: #0056EC;
+     }*/
+}
+/*.menu-wrapper {
   display: inline-block;
   cursor: pointer;
 }
@@ -166,38 +292,4 @@ background: #ECF3FF;
   transform: rotate(-45deg);
   top: 0;
   transition: top 0.2s linear, transform 0.2s ease-in 0.2s;  
-} 
-
-
-
-@media (max-width: 768px) {
-  .menu,.logo__name {
-    display: none;
-  }
-  .header {
-    margin-bottom: 28px;
-  }
-  .main {
-    text-align: center;
-    padding: 74% 0 0;
-    background-size: 74%;
-    background-position: top center;
-  }
-  .main__title {
-    margin-bottom: 44px;
-    font: bold 30px/40px pt_serif;
-  }
-  .main-subtitle {
-    margin-bottom: 25px;
-    font: 500 16px/19px Roboto;
-  }
-  .main__button {
-    font: 500 14px/16px Roboto;
-  }
-/*  .menu__icon__line {
-   width: 35px;
-   height: 3px;
-   left: 326px;
-   background-color: #0056EC;
-     }*/
-}
+} */

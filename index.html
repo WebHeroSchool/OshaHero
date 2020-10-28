@@ -10,7 +10,6 @@
  <body>
    <div class="wrapper">
      <header class="header">
-       <!---<script csr='script.js'></script>--->
        <meta name="viewport" content="width=device-width,initial-scale=1">
        <div class="logo">
           <div class="logo__circle logo__circle_color_darck-blue"></div>
@@ -25,14 +24,19 @@
         <a class="menu__item" href="#">blog</a>
         <a class="menu__item" href="#">contact us</a>
        </nav>
-       <div class="menu-wrapper">
-         <div id="menuToggle" class="menu-icon">
-           <div class="menu-icon-line"></div>
-         </div>
-       </div> 
-     <script >
-       scr="script.js"
-     </script>  
+       <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
+        <ul class="menu__box">
+          <li><a class="menu__item_box" href="#">start</a></li>
+          <li><a class="menu__item_box" href="#">services</a></li>
+          <li><a class="menu__item_box" href="#">about</a></li>
+          <li><a class="menu__item_box" href="#">blog</a></li>
+          <li><a class="menu__item_box" href="#">contact us</a></li>
+        </ul>
+       </div>
      </header>
      <section class="main">
         <h1 class="main__title">
