@@ -8,14 +8,17 @@ body {display: block; margin: 0;
 .header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 206px;
+  margin-bottom: 130px;
 }
 /*-----------логотип-----------------------------*/
 .logo {
   position: relative;
   padding: 40px 0;
+  width: 146px;
+  height: 32px;
   padding-left: 44px;
-  font: bold 24px/32px PT-serif;
+  line-height: 32px;
+  font: bold 24px/32px 'pt_serifbold';
   }
 .logo__circle {
   position: absolute;
@@ -43,6 +46,7 @@ body {display: block; margin: 0;
 .menu__item {
   position: relative;
   margin-right: 26px;
+  line-height: 21px;
   font: 500 18px/21px Roboto;
   color: #000;
   text-decoration: none;
@@ -63,35 +67,34 @@ background: #0056EC;
   opacity: .5;
 }
 .menu__item::after {
-  position: absolute;
-  display: block;
-  content: '';
-  left: 0;
-  width: 0;
-  height: 3px;
-  background: #0056EC;
-  opacity: 0;
-  transition: opacity 0.5s, width 0.5s;
-  }
+position: absolute;
+display: block;
+content: '';
+left: 0;
+width: 0;
+height: 3px;
+background: #0056EC;
+opacity: 0;
+transition: opacity 0.5s, width 0.5s;
+}
 .menu__item:hover::after,.menu__item_active::after {
-  opacity: 1;
-  width: 100%;
+opacity: 1;
+width: 100%;
 }
 .main {
 padding-right: 63%;
+border: 1px;
 background:no-repeat url(img/main.svg) top right;
 }
 .main__title {
 margin: 0 0 40px 0;
-width: 567px;
-height: 255px;
+line-height: 87px;
 font-style: normal;
-font: bold 66px/87px pt_serif;
+font-weight: bold;
+font: bold 66px/87px pt_serifbold;
 }
 .main-subtitle {
 margin: 0 0 41px 0;
-width: 455px;
-height: 52px;
 line-height: 26px;
 font: normal 22px/26px Roboto;
 }
@@ -99,15 +102,16 @@ font: normal 22px/26px Roboto;
 background: #ECF3FF;
 }
 .main__button {
-  display: inline-block;
-  padding: 18px 21px;
-  border: none;
-  font: 18px/21px Roboto;
-  background-color: #0056EC;
-  color: #FFF;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: opacity .5s;
+display: inline-block;
+padding: 18px 31px 18px 27px;
+border: none;
+line-height: 21px;
+font: 18px Roboto;  
+background-color: #0056EC;
+color: #FFF;
+border-radius: 4px;
+text-decoration: none;
+transition: opacity .5s;
 }
 .main__button:hover {
   opacity: .5;
@@ -126,13 +130,13 @@ background: #ECF3FF;
  /*---------------Кнопка навигации------------*/
 
 /* скрываем чекбокс */
-#menu__toggle {
+#ham-menu__toggle {
   opacity: 0;
 }
 /* стилизуем кнопку */
-.menu__btn {
+.ham-menu__btn {
   display: none;
-  position: fixed;
+  position: absolute;
   top: 32px;
   left: 326px;
   width: 25px;
@@ -141,31 +145,31 @@ background: #ECF3FF;
   z-index: 1;
 }
 @media (max-width: 375px){
-  .menu__btn {
+  .ham-menu__btn {
    display: flex; /* используем flex для центрирования содержимого */
    align-items: center;  /* центрируем содержимое кнопки */
   }
 }
 /* добавляем "гамбургер" */
-.menu__btn > span,
-.menu__btn > span::before,
-.menu__btn > span::after {
+.ham-menu__btn > span,
+.ham-menu__btn > span::before,
+.ham-menu__btn > span::after {
   display: block;
   position: absolute;
   width: 100%;
   height: 3px;
   background-color: #0056EC;
 }
-.menu__btn > span::before {
+.ham-menu__btn > span::before {
   content: '';
   top: -4px;
 }
-.menu__btn > span::after {
+.ham-menu__btn > span::after {
   content: '';
   top: 4px;
 }
 /*------------------------ контейнер меню------------------------ */
-.menu__box {
+.ham-menu__box {
   display: block;
   position: fixed;
   visibility: hidden;
@@ -182,7 +186,7 @@ background: #ECF3FF;
 }
 
 /* элементы меню */
-.menu__item_box {
+.ham-menu__item_box {
   display: block;
   margin-bottom: 24px ;
   color: #000000;
@@ -191,22 +195,22 @@ background: #ECF3FF;
   font-weight: 500;
   text-decoration: none;
 }
-.menu__item_box:hover {
+.ham-menu__item_box:hover {
   background-color: #FFF;
 }
 
-#menu__toggle:checked ~ .menu__btn > span {
+#ham-menu__toggle:checked ~ .ham-menu__btn > span {
   transform: rotate(45deg);
 }
-#menu__toggle:checked ~ .menu__btn > span::before {
+#ham-menu__toggle:checked ~ .ham-menu__btn > span::before {
   top: 0;
   transform: rotate(0);
 }
-#menu__toggle:checked ~ .menu__btn > span::after {
+#ham-menu__toggle:checked ~ .ham-menu__btn > span::after {
   top: 0;
   transform: rotate(90deg);
 }
-#menu__toggle:checked ~ .menu__box {
+#ham-menu__toggle:checked ~ .ham-menu__box {
   visibility: visible;
   left: 0;
 }
@@ -235,61 +239,3 @@ background: #ECF3FF;
   .main__button {
     font: 500 14px/16px Roboto;
   }
-/*  .menu__icon__line {
-   width: 35px;
-   height: 3px;
-   left: 326px;
-   background-color: #0056EC;
-     }*/
-}
-/*.menu-wrapper {
-  display: inline-block;
-  cursor: pointer;
-}
-.menu-icon {
-  width: 25px;
-  height: 17px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 32px;
-}
-.menu-icon-line {
-  position: relative;
-  width: 25px;
-  height: 3px;
-  background-color: #0056EC;
-}
-.menu-icon-line::before {
-  position: absolute;
-  left: 0;
-  content: '';
-  width: 25px;
-  height: 3px;
-  top: 4px;
-  background-color: #0056EC;
-  transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
-}
-.menu-icon-line::after {
-  position: absolute;
-  left: 0;
-  content: '';
-  width: 25px;
-  height: 3px;
-  top: -4px;
-  background-color: #0056EC;
-  transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
-}
-.menu-icon.menu-icon-active .menu-icon-line {
-  background-color: transparent;
-}
-.menu-icon.menu-icon-active .menu-icon-line::before {
-  transform: rotate(45deg);
-  top: 0;
-  transition: top 0.2s linear, transform 0.2s ease-in 0.2s;  
-}
-.menu-icon.menu-icon-active .menu-icon-line::after {
-  transform: rotate(-45deg);
-  top: 0;
-  transition: top 0.2s linear, transform 0.2s ease-in 0.2s;  
-} */
