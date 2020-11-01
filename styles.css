@@ -81,20 +81,23 @@ transition: opacity 0.5s, width 0.5s;
 opacity: 1;
 width: 100%;
 }
+/*----------------Основной блок------------------*/
 .main {
 padding-right: 63%;
-border: 1px;
+padding-bottom: 90%;
 background:no-repeat url(img/main.svg) top right;
 }
 .main__title {
-margin: 0 0 40px 0;
+margin: 0px 0 36px 0;
 line-height: 87px;
+padding-top: 76px;
 font-style: normal;
 font-weight: bold;
 font: bold 66px/87px pt_serifbold;
 }
 .main-subtitle {
-margin: 0 0 41px 0;
+margin: 0px 113.33px 35px 0;
+padding-right: 0px;
 line-height: 26px;
 font: normal 22px/26px Roboto;
 }
@@ -103,10 +106,10 @@ background: #ECF3FF;
 }
 .main__button {
 display: inline-block;
-padding: 18px 31px 18px 27px;
+padding: 20px 45px 16px 16px;
 border: none;
 line-height: 21px;
-font: 18px Roboto;  
+font: 500 18px Roboto;  
 background-color: #0056EC;
 color: #FFF;
 border-radius: 4px;
@@ -129,11 +132,15 @@ transition: opacity .5s;
 }
  /*---------------Кнопка навигации------------*/
 
+input {
+  display: none;
+}
 /* скрываем чекбокс */
 #ham-menu__toggle {
   opacity: 0;
 }
 /* стилизуем кнопку */
+
 .ham-menu__btn {
   display: none;
   position: absolute;
