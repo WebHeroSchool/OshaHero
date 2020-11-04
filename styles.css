@@ -144,7 +144,8 @@ input {
 
 .ham-menu__btn {
   display: none;
-  margin: 32px 0 0 226px;
+  position: relative;
+  margin: 0px 0 0 0px;
   /*padding-top: 32px;*/
   top: 32px;
   /*padding-left: 250px;*/
@@ -179,19 +180,17 @@ input {
 }
 /*------------------------ контейнер меню------------------------ */
 .ham-menu__box {
-  display: block;
   position: fixed;
   visibility: hidden;
-  top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  padding: 286px 0;
+  /*padding: 286px 0;*/
   list-style: none;
   text-align: center;
   background-color: #fff;
-  margin: 30px 0;
-  box-shadow: 10px 0px 16px (0, 0, 0, .0);
+  margin: 0px 0;
+  /*box-shadow: 0px 0px 0px (0, 0, 0, .0);*/
   z-index: 2;
 }
 
@@ -226,6 +225,9 @@ input {
 }
 
 @media (max-width: 375px) {
+  .ham-menu__box {
+    width: 100%;
+  }
   .menu {
     display: none;
   }
