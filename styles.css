@@ -52,7 +52,7 @@ body {display: block; margin: 0;
   text-decoration: none;
 }
 .menu__item:last-child {
-  margin-right: 0;
+  margin-right: 10px;
 }
 .menu__item_active::after {
 position: absolute;
@@ -96,7 +96,7 @@ font-weight: bold;
 font: bold 66px/87px pt_serifbold;
 }
 .main-subtitle {
-margin: 0px 113.33px 35px 0;
+margin: 0px 0px 35px 0;
 padding-right: 0px;
 line-height: 26px;
 font: normal 22px/26px Roboto;
@@ -138,20 +138,22 @@ input {
 /* скрываем чекбокс */
 #ham-menu__toggle {
   opacity: 0;
+  
 }
 /* стилизуем кнопку */
 
 .ham-menu__btn {
   display: none;
-  position: absolute;
+  margin: 32px 0 0 226px;
+  /*padding-top: 32px;*/
   top: 32px;
-  left: 326px;
+  /*padding-left: 250px;*/
   width: 25px;
   height: 17px;
   cursor: pointer;
-  z-index: 1;
+  z-index: 3;
 }
-@media (max-width: 375px){
+@media (max-width: 375px) {
   .ham-menu__btn {
    display: flex; /* используем flex для центрирования содержимого */
    align-items: center;  /* центрируем содержимое кнопки */
@@ -163,7 +165,7 @@ input {
 .ham-menu__btn > span::after {
   display: block;
   position: absolute;
-  width: 100%;
+  width: 25px;
   height: 3px;
   background-color: #0056EC;
 }
@@ -184,12 +186,13 @@ input {
   left: -100%;
   width: 100%;
   height: 100%;
-  padding: 186px 0;
+  padding: 286px 0;
   list-style: none;
   text-align: center;
   background-color: #fff;
-  margin: 0 0;
- /* box-shadow: 10px 0px 16px rgba(0, 0, 0, .2);*/
+  margin: 30px 0;
+  box-shadow: 10px 0px 16px (0, 0, 0, .0);
+  z-index: 2;
 }
 
 /* элементы меню */
@@ -223,20 +226,25 @@ input {
 }
 
 @media (max-width: 375px) {
-  .menu,.logo__name {
+  .menu {
     display: none;
   }
+  .logo__name {
+    display: none;
+  } 
   .header {
-    margin-bottom: 28px;
+    margin-bottom: 12px;
   }
   .main {
     text-align: center;
-    padding: 74% 0 0;
-    background-size: 74%;
+    padding: 80px 0 15px 0;
+    background-size: 100%;
     background-position: top center;
   }
   .main__title {
+    text-align: center;
     margin-bottom: 44px;
+    padding-top: 144px;
     font: bold 30px/40px pt_serif;
   }
   .main-subtitle {
@@ -246,3 +254,4 @@ input {
   .main__button {
     font: 500 14px/16px Roboto;
   }
+}
