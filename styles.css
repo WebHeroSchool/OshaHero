@@ -148,18 +148,13 @@ input {
   margin: 0px 0 0 0px;
   /*padding-top: 32px;*/
   top: 32px;
-  /*padding-left: 250px;*/
+ /* padding-right: 25px;*/
   width: 25px;
   height: 17px;
   cursor: pointer;
   z-index: 3;
 }
-@media (max-width: 375px) {
-  .ham-menu__btn {
-   display: flex; /* используем flex для центрирования содержимого */
-   align-items: center;  /* центрируем содержимое кнопки */
-  }
-}
+
 /* добавляем "гамбургер" */
 .ham-menu__btn > span,
 .ham-menu__btn > span::before,
