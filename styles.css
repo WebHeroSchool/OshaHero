@@ -239,7 +239,7 @@ input {
     display: block;
     width: 25px;
     height: 17px;
-    padding: 32px;
+    padding: 0px;
   }
   .ham-menu__box {
     width: 100%;
@@ -247,7 +247,7 @@ input {
   .ham-menu__btn {
     display: flex; /* используем flex для центрирования содержимого */
     align-items: center;  /* центрируем содержимое кнопки */
-    padding-left: 10px;
+    padding-right: 0px;
   }
   .span {
     position: -7px 0 -7px 0;
@@ -263,7 +263,7 @@ input {
     padding: 0;
   } 
   .header {
-    margin-bottom: 0px;
+    margin-bottom: 50px;
   }
   .main {
     text-align: center;
@@ -283,6 +283,7 @@ input {
   .main-subtitle {
     text-align: center;
     max-width: 280px;
+    max-height: 57px;
     margin-bottom: 25px;
     line-height: 19px;
     font: 500 16px/19px Roboto;
@@ -345,7 +346,7 @@ input {
     }
   .main__title {
     text-align: center;
-    min-width: 270px;
+    min-width: 300px;
     max-width: 350px;
     margin-bottom: 32px;
     padding-top: 186px;
