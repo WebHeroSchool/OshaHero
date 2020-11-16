@@ -100,6 +100,7 @@ margin: 0px 0px 35px 0;
 padding-right: 0px;
 line-height: 26px;
 font: normal 22px/26px Roboto;
+max-width: 455px;
 }
 .main__title-text_highlight {
 background: #ECF3FF;
@@ -147,24 +148,18 @@ input {
   position: relative;
   margin: 0px 0 0 0px;
   /*padding-top: 32px;*/
-  top: 32px;
-  /*padding-left: 250px;*/
+    /*padding-left: 250px;*/
   width: 25px;
   height: 17px;
   cursor: pointer;
   z-index: 3;
 }
-@media (max-width: 375px) {
-  .ham-menu__btn {
-   display: flex; /* используем flex для центрирования содержимого */
-   align-items: center;  /* центрируем содержимое кнопки */
-  }
-}
+
 /* добавляем "гамбургер" */
 .ham-menu__btn > span,
 .ham-menu__btn > span::before,
 .ham-menu__btn > span::after {
-  display: block;
+  /*display: block;*/
   position: absolute;
   width: 25px;
   height: 3px;
@@ -172,24 +167,26 @@ input {
 }
 .ham-menu__btn > span::before {
   content: '';
-  top: -4px;
+  top: -6px;
 }
 .ham-menu__btn > span::after {
   content: '';
-  top: 4px;
+  top: 6px;
 }
 /*------------------------ контейнер меню------------------------ */
 .ham-menu__box {
   position: fixed;
   visibility: hidden;
+  top: -17px;
   left: -100%;
   width: 100%;
   height: 100%;
-  /*padding: 286px 0;*/
+  padding: 0 0 0 0;
   list-style: none;
   text-align: center;
   background-color: #fff;
   margin: 0px 0;
+  padding-top: 203px;
   /*box-shadow: 0px 0px 0px (0, 0, 0, .0);*/
   z-index: 2;
 }
@@ -197,11 +194,12 @@ input {
 /* элементы меню */
 .ham-menu__item_box {
   display: block;
-  margin-bottom: 24px ;
+  margin-bottom: 24px;
   color: #000000;
   font-family: 'Roboto', sans-serif;
   font-size: 30px;
   font-weight: 500;
+  line-height: 35px;
   text-decoration: none;
 }
 .ham-menu__item_box:hover {
@@ -223,37 +221,373 @@ input {
   visibility: visible;
   left: 0;
 }
-
-@media (max-width: 375px) {
+.hamburger-menu {
+  display: none;
+}
+/*-----------------------------Для  разрешения 375 и менее ---------------------------*/
+@media screen and (min-width: 0px) and (max-width: 375px) {
+  .wrapper {
+    width: 100%;
+    height: 100%;
+  }
+  .hamburger-menu {
+    display: block;
+    width: 25px;
+    height: 17px;
+    padding: 32px;
+  }
   .ham-menu__box {
     width: 100%;
+  }
+  .ham-menu__btn {
+    display: flex; /* используем flex для центрирования содержимого */
+    align-items: center;  /* центрируем содержимое кнопки */
+    padding-left: 10px;
+  }
+  .span {
+    position: -7px 0 -7px 0;
   }
   .menu {
     display: none;
   }
+  .logo {
+    padding: 0;
+  }
   .logo__name {
     display: none;
+    padding: 0;
   } 
   .header {
-    margin-bottom: 12px;
+    margin-bottom: 0px;
   }
   .main {
     text-align: center;
-    padding: 80px 0 15px 0;
-    background-size: 100%;
+    padding: 80px 47px 0 48px;
+    background-size: 76%;
     background-position: top center;
+    
   }
   .main__title {
     text-align: center;
-    margin-bottom: 44px;
-    padding-top: 144px;
+    max-width: 270px;
+    margin-bottom: 32px;
+    padding-top: 186px;
+    line-height: 40px;
     font: bold 30px/40px pt_serif;
   }
   .main-subtitle {
+    text-align: center;
+    max-width: 280px;
     margin-bottom: 25px;
+    line-height: 19px;
     font: 500 16px/19px Roboto;
   }
   .main__button {
     font: 500 14px/16px Roboto;
+    padding: 14px 25px 13px 16px;
+    line-height: 16px;
+    margin-bottom: 43px;
+  }
+  .logo__circle_color_darck-blue {
+    margin: 24px 0 0 24px;
+  }
+  .logo__circle_color_blue {
+    margin: 26px 0 0 27px;
+  }
+}
+/*-------------от 376 до 450 ------*/
+@media screen and (min-width: 376px) and (max-width: 450px) {
+  .wrapper {
+    width: 100%;
+    height: 100%;
+  }
+  .hamburger-menu {
+    display: block;
+    width: 25px;
+    height: 17px;
+    padding: 32px 32px 20px 32px;
+  }
+  .ham-menu__box {
+    width: 100%;
+  }
+  .ham-menu__btn {
+    display: flex; /* используем flex для центрирования содержимого */
+    align-items: center;  /* центрируем содержимое кнопки */
+    padding-left: 10px;
+    padding-right: 32px;
+  }
+  .span {
+    position: -7px 0 -7px 0;
+  }
+  .menu {
+    display: none;
+  }
+  .logo {
+    padding: 0;
+  }
+  .logo__name {
+    display: none;
+    padding: 0;
+  } 
+  .header {
+    margin-bottom: 0px;
+  }
+  .main {
+    text-align: center;
+    padding: 80px 47px 0 48px;
+    background-size: 66%;
+    background-position: top center;
+    }
+  .main__title {
+    text-align: center;
+    min-width: 270px;
+    max-width: 350px;
+    margin-bottom: 32px;
+    padding-top: 186px;
+    line-height: 40px;
+    font: bold 30px/40px pt_serif;
+  }
+  .main-subtitle {
+    text-align: center;
+    min-width: 280px;
+    max-width: 350px;
+    margin-bottom: 25px;
+    line-height: 19px;
+    font: 500 16px/19px Roboto;
+  }
+  .main__button {
+    font: 500 14px/16px Roboto;
+    padding: 14px 25px 13px 16px;
+    line-height: 16px;
+    margin-bottom: 43px;
+  }
+  .logo__circle_color_darck-blue {
+    margin: 24px 0 0 24px;
+  }
+  .logo__circle_color_blue {
+    margin: 26px 0 0 27px;
+  }
+}
+/*-----------------------451 и более---------------------*/
+@media screen and (min-width: 451px) and (max-width: 600px) {
+  .wrapper {
+    width: 100%;
+    height: 100%;
+  }
+  .hamburger-menu {
+    display: none;
+  }
+  .header {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+ .menu {
+    display: flex;
+    align-items: center;
+    padding-top: 33px;
+  }
+  .menu__item {
+  margin-right: 10px;
+  line-height: 16px;
+  font: 500 14px/16px Roboto;
+  
+  }
+  .menu__item:last-child {
+    margin-right: 20px;
+  }
+  .logo {
+    padding: 0;
+  }
+ .logo__name {
+    display: inline-block;
+    padding: 24px 0 0 10px;
+    margin-left: 55px;
+    font-size: 16px;
+  } 
+  .main {
+    text-align: center;
+    padding: 160px 47px 0 48px;
+    background-size: 68%;
+    background-position: top center;
+  }
+  .main__title {
+    text-align: center;
+    min-width: 350px;
+    max-width: 600px;
+    margin-bottom: 32px;
+    padding-top: 186px;
+    line-height: 40px;
+    font: bold 30px/40px pt_serif;
+  }
+  .main-subtitle {
+    text-align: center;
+    min-width: 350px;
+    max-width: 650px;
+    margin-bottom: 25px;
+    line-height: 19px;
+    font: 500 16px/19px Roboto;
+  }
+  .main__button {
+    font: 500 14px/16px Roboto;
+    padding: 14px 25px 13px 16px;
+    line-height: 16px;
+    margin-bottom: 43px;
+  }
+  .logo__circle_color_darck-blue {
+    margin: 24px 0 0 24px;
+  }
+  .logo__circle_color_blue {
+    margin: 26px 0 0 27px;
+  }
+}
+
+/*-------------------------Для разрешения 1024*768 и более--------------------*/
+@media screen and (min-width: 601px) and (max-width: 1365px) {
+  .wrapper {
+    width: 100%;
+    height: 100%;
+    margin: 0px 0px 0px 0px;
+  }
+  .header {
+    margin-bottom: 90px;
+    justify-content: space-between;
+  }
+ /*--------------------Header 1024-------------------------*/ 
+ .logo {
+    padding-left: 90px;
+  }
+  .logo__circle_color_darck-blue {
+    margin-left: 46px;
+  }
+  .logo__circle_color_blue {
+    margin-left: 46px;
+  }
+  .menu__item {
+    position: relative;
+    margin-right: 24px;
+    line-height: 16px;
+    font: 500 14px/16px Roboto;
+  }
+  .menu__item:last-child {
+    margin-right: 10px;
+  }
+  .menu {
+    display:flex;
+    align-items: center;
+    margin-left: 0px;
+    margin-right: 43px;
+    padding-top: 10px;
+  }
+  /*--------------------Основной блок 1024----------------------------*/
+  .main {
+    margin-right: 47px;
+    background-size: 52%;
+    padding-top: 10px;
+    padding-right: 53%;
+    padding-bottom: 20%;
+    background-position: top right ;
+    }
+  .main__title {
+    margin: 0px 0 40px 0;
+    padding-left: 46px;
+    max-width: 434px;
+    line-height: 66px;
+    padding-top: 0px;
+    padding-right: 0px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: clamp(30px, (1rem + 5vw), 50px);
+    font: bold 50px/66px pt_serifbold;
+    }
+  .main-subtitle {
+    margin: 0px 0px 41px 0;
+    padding-right: 0px;
+    padding-left: 46px;
+    max-width: 367px;
+    line-height: 21px;
+    font: normal 18px/21px Roboto;
+    }
+  .main__button {
+    font: 500 14px/16px Roboto;
+    padding: 14px 25px 13px 16px;
+    line-height: 16px;
+    margin-bottom: 43px;
+    margin-left: 46px;
+    }
+}
+    /*-------------------------Для разрешения 1366*768 и более---------------------*/
+@media screen and (min-width: 1366px) and (max-width: 1919px) {
+  .wrapper {
+    width: 100%;
+    height: 100%;
+    margin: 0px 0px 0px 0px;
+  }
+  .header {
+    margin-bottom: 84px;
+    justify-content: space-between;
+  }
+
+ /*--------------------Header 1366-------------------------*/ 
+ .logo {
+    padding-left: 263px;
+  }
+  .logo__circle_color_darck-blue {
+    margin-left: 219px;
+  }
+  .logo__circle_color_blue {
+    margin-left: 219px;
+  }
+  .menu__item {
+    position: relative;
+    margin-right: 24px;
+    line-height: 16px;
+    font: 500 14px/16px Roboto;
+  }
+  .menu__item:last-child {
+    margin-right: 10px;
+  }
+  .menu {
+    display:flex;
+    align-items: center;
+    margin-left: 0px;
+    margin-right: 218px;
+    padding-top: 10px;
+  }
+  /*--------------------Основной блок 1366----------------------------*/
+  .main {
+    margin-right: 218px;
+    background-size: 45%;
+    padding-top: 16px;
+    padding-right: 30%;
+    padding-bottom: 20%;
+    background-position: top right ;
+    }
+  .main__title {
+    margin: 0px 0 40px 0;
+    padding-left: 218px;
+    max-width: 450px;
+    max-height: 195px;
+    line-height: 66px;
+    padding-top: 0px;
+    padding-right: 0px;
+    font-style: normal;
+    font-weight: bold;
+    font: bold 50px/66px pt_serifbold;
+    }
+  .main-subtitle {
+    margin: 0px 0px 41px 0;
+    padding-right: 0px;
+    padding-left: 218px;
+    max-width: 367px;
+    line-height: 21px;
+    font: normal 18px/21px Roboto;
+    }
+  .main__button {
+    font: 500 14px/16px Roboto;
+    padding: 14px 25px 13px 16px;
+    line-height: 16px;
+    margin-bottom: 43px;
+    margin-left: 218px;
   }
 }
