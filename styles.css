@@ -100,7 +100,6 @@ margin: 0px 0px 35px 0;
 padding-right: 0px;
 line-height: 26px;
 font: normal 22px/26px Roboto;
-max-width: 455px;
 }
 .main__title-text_highlight {
 background: #ECF3FF;
@@ -148,18 +147,24 @@ input {
   position: relative;
   margin: 0px 0 0 0px;
   /*padding-top: 32px;*/
-    /*padding-left: 250px;*/
+  top: 32px;
+  /*padding-left: 250px;*/
   width: 25px;
   height: 17px;
   cursor: pointer;
   z-index: 3;
 }
-
+@media (max-width: 375px) {
+  .ham-menu__btn {
+   display: flex; /* используем flex для центрирования содержимого */
+   align-items: center;  /* центрируем содержимое кнопки */
+  }
+}
 /* добавляем "гамбургер" */
 .ham-menu__btn > span,
 .ham-menu__btn > span::before,
 .ham-menu__btn > span::after {
-  /*display: block;*/
+  display: block;
   position: absolute;
   width: 25px;
   height: 3px;
