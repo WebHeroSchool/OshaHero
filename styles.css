@@ -143,12 +143,11 @@ input {
 /* стилизуем кнопку */
 
 .ham-menu__btn {
-  display: none;
   position: relative;
+  display: flex; /* используем flex для центрирования содержимого */
+  align-items: center;  /* центрируем содержимое кнопки */
   margin: 0px 0 0 0px;
-  /*padding-top: 32px;*/
   top: 32px;
- /* padding-right: 25px;*/
   width: 25px;
   height: 17px;
   cursor: pointer;
@@ -234,16 +233,17 @@ input {
     display: block;
     width: 25px;
     height: 17px;
-    padding: 0px;
+    padding-right: 25px;
   }
   .ham-menu__box {
     width: 100%;
   }
-  .ham-menu__btn {
+  /*.ham-menu__btn {
     display: flex; /* используем flex для центрирования содержимого */
-    align-items: center;  /* центрируем содержимое кнопки */
-    padding-right: 0px;
-  }
+   /* align-items: center;  /* центрируем содержимое кнопки */
+   /* padding-right: 0px;
+    top: 32px;
+  }*/
   .span {
     position: -7px 0 -7px 0;
   }
@@ -306,7 +306,7 @@ input {
     display: block;
     width: 25px;
     height: 17px;
-    padding: 32px 32px 20px 32px;
+    padding: 0px 32px 20px 32px;
   }
   .ham-menu__box {
     width: 100%;
@@ -331,7 +331,7 @@ input {
     padding: 0;
   } 
   .header {
-    margin-bottom: 0px;
+    margin-bottom: 30px;
   }
   .main {
     text-align: center;
