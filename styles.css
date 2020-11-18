@@ -34,9 +34,15 @@ body {display: block; margin: 0;
   left: 8px;
   top: 56%;
   background: #C8DBFB;
+  animation: 3s circle ease-in-out infinite; 
 }
+@keyframes circle {
+  50% {left: 83%;}
+}
+
 .logo__circle_color_darck-blue {
   background: #0056EC;
+  
 }
 /*----------------------------навигация----------------*/
 .menu {
@@ -253,6 +259,9 @@ input {
   .logo {
     padding: 0;
   }
+  @keyframes circle {
+    50% {left: 25%;}
+  }
   .logo__name {
     display: none;
     padding: 0;
@@ -296,6 +305,7 @@ input {
     margin: 26px 0 0 27px;
   }
 }
+
 /*-------------от 376 до 450 ------*/
 @media screen and (min-width: 376px) and (max-width: 450px) {
   .wrapper {
@@ -325,6 +335,9 @@ input {
   }
   .logo {
     padding: 0;
+  }
+  @keyframes circle {
+    50% {left: 30%;}
   }
   .logo__name {
     display: none;
@@ -406,6 +419,9 @@ input {
     margin-left: 55px;
     font-size: 16px;
   } 
+  @keyframes circle {
+    50% {left: 73%;}
+  }
   .main {
     text-align: center;
     padding: 160px 47px 0 48px;
@@ -463,6 +479,9 @@ input {
   }
   .logo__circle_color_blue {
     margin-left: 46px;
+  }
+  @keyframes circle {
+    50% {left: 70%;}
   }
   .menu__item {
     position: relative;
@@ -538,6 +557,9 @@ input {
   }
   .logo__circle_color_blue {
     margin-left: 219px;
+  }
+  @keyframes circle {
+    50% {left: 40%;}
   }
   .menu__item {
     position: relative;
