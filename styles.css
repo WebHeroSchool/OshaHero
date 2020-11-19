@@ -244,12 +244,6 @@ input {
   .ham-menu__box {
     width: 100%;
   }
-  /*.ham-menu__btn {
-    display: flex; /* используем flex для центрирования содержимого */
-   /* align-items: center;  /* центрируем содержимое кнопки */
-   /* padding-right: 0px;
-    top: 32px;
-  }*/
   .span {
     position: -7px 0 -7px 0;
   }
@@ -322,8 +316,8 @@ input {
     width: 100%;
   }
   .ham-menu__btn {
-    display: flex; /* используем flex для центрирования содержимого */
-    align-items: center;  /* центрируем содержимое кнопки */
+    display: flex;
+    align-items: center; 
     padding-left: 10px;
     padding-right: 32px;
   }
@@ -467,7 +461,7 @@ input {
     margin: 0px 0px 0px 0px;
   }
   .header {
-    margin-bottom: 90px;
+    margin-bottom: 40px;
     justify-content: space-between;
   }
  /*--------------------Header 1024-------------------------*/ 
@@ -541,10 +535,10 @@ input {
   .wrapper {
     width: 100%;
     height: 100%;
-    margin: 0px 0px 0px 0px;
+    margin: 0;
   }
   .header {
-    margin-bottom: 84px;
+    margin-bottom: 40px;
     justify-content: space-between;
   }
 
