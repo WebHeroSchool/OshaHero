@@ -1,0 +1,9 @@
+diff a/styles.css b/styles.css	(rejected hunks)
+@@ -100,6 +100,7 @@
+ padding-right: 0px;
+ line-height: 26px;
+ font: normal 22px/26px Roboto;
++max-width: 455px;
+ }
+ .main__title-text_highlight {
+ background: #ECF3FF;
